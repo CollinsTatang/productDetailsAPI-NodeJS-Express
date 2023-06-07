@@ -1,5 +1,5 @@
 const express = require('express');
-const productController = require('./productController')
+const productController = require('./Controller/productController')
 const app = express();
 
 app.get('/api/products', productController.getProducts)
