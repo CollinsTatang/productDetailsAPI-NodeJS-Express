@@ -1,8 +1,8 @@
-const { products } = require('./data')
+const Product = require("./Models/Product");
 
 const getProducts = (req, res) => {
     try{
-        const newProducts = products.map((product) => {
+        const newProducts = Product.getProducts().map((product) => {
             const { id, name, image } = product
             return { id, name, image }
           })
