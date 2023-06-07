@@ -1,1 +1,1 @@
-# productDetailsAPI-NodeJS
+# productDetailsAPI-NodeJS-Express
