@@ -14,12 +14,11 @@ const getProducts = (req, res) => {
 
 const singleProducts = (req, res) => {
     try{
-        const { productID } = req.params
-
-        const singleProducts = products.find((product) => product.id === Number(productID));
+        const { id } = req.params
+        const singleProducts = products.find((product) => product.id === Number(id));
 
         if(!singleProducts){
-            return res.status(404).send("Product Not found");
+            return res.status(404).json({status: "Product Not found"});
         }
           return res.status(200).json(singleProducts)
     } catch (error){

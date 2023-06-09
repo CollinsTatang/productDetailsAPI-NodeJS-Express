@@ -3,7 +3,7 @@ const productController = require('./Controller/productController')
 const app = express();
 
 app.get('/api/products', productController.getProducts)
-app.get('/api/products/:productID', productController.singleProducts)
+app.get('/api/products/:id', productController.singleProducts)
 
 
 app.listen(5000, () => {
